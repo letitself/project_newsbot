@@ -47,23 +47,23 @@ def get_text_messages2(message):
         if user not in notthesame.keys():
             notthesame[user] = []
         bot.send_message(message.chat.id, panorama_article(user))
-    #elif: 
-        #re.fullmatch('[à-ÿÀ-ß¸¨]+', ()):
-        #bot.send_message(message.chat.id, panorama_suitable_articles('https://panorama.pub/?s=' + message.text.replace(' ', '+')))
+    elif: 
+        re.fullmatch('[Ğ-Ğ¯Ğ°-ÑÂ¸Â¨]+', ()):
+        bot.send_message(message.chat.id, panorama_suitable_articles('https://panorama.pub/?s=' + message.text.replace(' ', '+')))
     else:
         bot.reply_to(message, 'text me PANORAMA')
 
-#def panorama_suitable_articles(url):
-    #url = 'https://panorama.pub'
-    #unpretty_text= page.text
-    #soup = BeautifulSoup(unpretty_text, 'html.parser')
-    #page = requests.get(home_url)
-    #ads = soup.find("nav", class_="main-mnu hidden-md hidden-sm hidden-xs").find("ul").find_all("li")
-    #links=[]
-    #for ad in ads:
-     #   urls = ad.find("a").get("href")
-      #  link = "https://panorama.pub" + urls
-       # print(link)
-        #links.append(link)
-    #return link
+def panorama_suitable_articles(url):
+    url = 'https://panorama.pub'
+    unpretty_text= page.text
+    soup = BeautifulSoup(unpretty_text, 'html.parser')
+    page = requests.get(home_url)
+    ads = soup.find("nav", class_="main-mnu hidden-md hidden-sm hidden-xs").find("ul").find_all("li")
+    links=[]
+    for ad in ads:
+        urls = ad.find("a").get("href")
+        link = "https://panorama.pub" + urls
+        print(link)
+        links.append(link)
+    return link
 bot.polling(none_stop = True, interval = 0)
