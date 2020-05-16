@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 import telebot
 import random
+from random import get_random_article
+
 
 
 def count(soup, REL):
