@@ -38,7 +38,7 @@ notthesame = {}
 
 @bot.message_handler(commands = ['start', 'help'])
 def get_text_messages(message):
-    bot.reply_to(message, 'text me PANORAMA if u want to see a meme')
+    bot.reply_to(message, 'text me PANORAMA if u want to see a meme or MEDUZA or RBK if u suriezniy')
 
 @bot.message_handler(content_types = ['text'])
 def get_text_messages2(message):
